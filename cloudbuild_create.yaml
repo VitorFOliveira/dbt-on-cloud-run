@@ -1,6 +1,6 @@
 substitutions:
-  _REPO_NAME: '-'
-  _REGION: 'europe-west2'
+  _REPO_NAME: ''
+  _REGION: 'us-east1'
   _JOB_NAME: 'dbt-cloud-run-job-demo'
 
 steps:

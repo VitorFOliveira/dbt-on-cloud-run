@@ -24,7 +24,7 @@ dbt run
 ## Build
 
 ```
-gcloud builds submit --config cloudbuild_build.yaml . --substitutions _REPO_NAME=demo
+gcloud builds submit --config cloudbuild_build.yaml . --substitutions _REPO_NAME=repositorioportifolioacademias
 ```
 
 ## Create the Cloud Run Job
@@ -32,7 +32,7 @@ gcloud builds submit --config cloudbuild_build.yaml . --substitutions _REPO_NAME
 > this uses the `deploy` command which manages both create and update
 
 ```
-gcloud builds submit --config cloudbuild_create.yaml . --substitutions _REPO_NAME=demo
+gcloud builds submit --config cloudbuild_create.yaml . --substitutions _REPO_NAME=repositorioportifolioacademias
 ```
 
 ## Trigger execution, including overriding

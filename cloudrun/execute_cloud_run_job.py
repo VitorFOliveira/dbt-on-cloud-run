@@ -64,8 +64,8 @@ async def run_job_async(project_id, location, job_id, override_args):
 
 
 # Example usage
-project_id = "rocketech-de-pgcp-sandbox"
-location = "europe-west2"
+project_id = "projeto-academia-portfolio"
+location = "us-east1"
 job_id = "dbt-cloud-run-job-demo"
 
 # override to do dbt debug

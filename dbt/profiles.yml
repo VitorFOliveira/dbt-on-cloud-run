@@ -7,4 +7,4 @@ jaffle_shop:
       method: oauth
       project: rocketech-de-pgcp-sandbox
       dataset: dbt_on_cloudrun_demo
-      threads: 24
+      threads: 6
