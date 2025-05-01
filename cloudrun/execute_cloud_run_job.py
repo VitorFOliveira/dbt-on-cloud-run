@@ -7,6 +7,8 @@ def run_job_sync(project_id, location, job_id, override_args):
     """
     Runs a job. Sync, waits for the whole cloud run job execution to complete
     """
+    print(f"Begining sincronous execution of job {job_id}")
+    
     # Create a client
     client = run_v2.JobsClient()
 
@@ -32,11 +34,15 @@ def run_job_sync(project_id, location, job_id, override_args):
     # Handle the response
     print(response)
 
+    print(f"End of Sincrous execution of job {job_id}")
+
 
 async def run_job_async(project_id, location, job_id, override_args):
     """
     Run a job asynchronously.
     """
+    print(f"Begining assincronous execution of job {job_id}")
+
     # Create a client
     client = run_v2.JobsAsyncClient()
 
@@ -62,6 +68,7 @@ async def run_job_async(project_id, location, job_id, override_args):
     # Handle the response
     print(response)
 
+    print(f"End of Assincrous execution of job {job_id}")
 
 # Example usage
 project_id = "projeto-academia-portfolio"
