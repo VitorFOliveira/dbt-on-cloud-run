@@ -82,5 +82,5 @@ override_args = ["poetry", "run", "dbt", "debug", "--target", "dev"]
 run_job_sync(project_id, location, job_id, override_args=override_args)
 
 # Async submission
-override_args = ["poetry", "run", "dbt", "run", "--full-refresh", "--target", "dev"]
+override_args = ["poetry", "run", "dbt", "build", "--full-refresh", "--target", "dev"]
 asyncio.run(run_job_async(project_id, location, job_id, override_args))
