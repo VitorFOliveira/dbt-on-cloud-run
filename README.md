@@ -37,3 +37,21 @@ gcloud builds submit --config cloudbuild_create.yaml . --substitutions _REPO_NAM
 
 ## Trigger execution, including overriding
 See [cloudrun/execute_cloud_run_job.py](cloudrun/execute_cloud_run_job.py)
+
+
+# Minhas adições ao README
+
+## Caso faça alterações no dbt precisa fazer o rebuild da imagem para o Job exectar a nova vesrsão
+1- Rebuild da imagem com o mesmo nome. Substitua SEU-PROJETO-ID e NOME-DA-IMAGEM pelos valores que você usou anteriormente:
+
+```
+gcloud builds submit --config cloudbuild_build.yaml . --substitutions _REPO_NAME=repositorioportifolioacademias
+```
+
+2- (Opcional) Forçar atualização do Job. Se o job já estiver apontando para essa mesma imagem, tecnicamente você não precisa rodar gcloud run jobs update.Mas às vezes o Cloud Run pode cachear a versão anterior, então você pode forçar a atualização assim:
+
+```
+gcloud run jobs update MEU-JOB \
+  --image gcr.io/SEU-PROJETO-ID/NOME-DA-IMAGEM \
+  --region us-central1
+``` 

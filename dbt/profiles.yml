@@ -5,6 +5,6 @@ jaffle_shop:
     dev:
       type: bigquery
       method: oauth
-      project: rocketech-de-pgcp-sandbox
-      dataset: dbt_on_cloudrun_demo
+      project: projeto-academia-portfolio
+      dataset: academia_etl
       threads: 6

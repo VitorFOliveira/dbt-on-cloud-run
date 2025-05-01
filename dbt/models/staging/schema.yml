@@ -1,5 +1,11 @@
 version: 2
 
+sources:
+  - name: academia_etl
+    database: projeto-academia-portfolio
+    tables:
+      - name: alunos_raw
+
 models:
   - name: stg_customers
     columns:

@@ -1,0 +1,2 @@
+google-cloud-run==0.10.5
+dbt-bigquery==1.9.1
